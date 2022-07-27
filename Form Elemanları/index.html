@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <title>Form Sayfası</title>
+    </head>
+    <body>
+
+<!--
+
+    * adı
+    * telefon
+    * email
+    * mesaj
+    * yaşadığı şehir
+    * cinsiyet
+
+    checked etiketi input'un içerisine yazıldığında seçim ekrana varsayılan seçilmiş olarak gelir.
+    selected etiketi options'un içerisine yazıldığında seçim ekrana varsayılan seçilmiş olarak gelir.
+    <input id="adi" type="hidden" value="s-500" name="product"  required/> hidden özelliği form içide görünmesini istemediğimiz veriyi form bilgilerini gönderdikten sonra arkaplanda görünür. Bir nevi gizlilik.
+    input içinde disabled özelliği içine bir şey yazmasını engeller. Ya da içi dolu ise değiştirmesine izin vermez.
+
+    ctrl+d kısayolu değiştirmek istediğimiz kodu çoklu seçim yaparak değiştiriyor. Kaç tane değişim yapacaksak adet sayısına göre d'ye basıyoruz.
+-->
+
+<form action="https://httpbin.org/post" method="post">
+    <div class="form-row">
+        <label for="adi">Adı</label>
+        <input id="adi" type="text" name="adi"  required placeholder="Recep Batur"/> <!-- required formda eklediğimiz yerin doldurulmasını zorunlu kılıyor.-->
+    </div>
+
+    <div class="form-row">
+        <label for="tel">Telefon</label>
+        <input id="tel" type="tel" name="tel" required />
+    </div>
+
+    <div class="form-row">
+        <label for="email">Email</label>
+        <input  name="email" id="email" type="email" required />
+    </div>
+
+    <div class="form-row">
+        <label for="mesaj">Mesaj</label>
+        <textarea name="mesaj" id="mesaj" rows="3"></textarea> <!-- cols beş içine girilecek karakter sayısını belirliyor. Rows satır sayısını belirliyor.-->
+    </div>
+
+    <div class="form-row">
+        <label for="sehir">Şehir</label>
+        <select name="sehir" id="sehir" >
+            <option value="34">İstanbul</option>
+            <option value="35">Ankara</option>
+            <option value="35">Malatya</option>
+            <option value="35">Artvin</option>
+            <option value="35">Mardin</option>
+            <option value="35">Mersin</option>
+            <option value="35">Muğla</option>
+        </select>
+    </div>
+<div class="form-row">
+    <p>Sevdiğiniz Renk</p>
+
+    <div class="radio-container">
+    <label>
+        <input type="radio" name="renk" value="kirmizi" checked />Kırmızı
+    </label>
+    <label>
+        <input type="radio" name="renk" value="yesil"/> Yeşil 
+    </label>
+    </div>
+    
+</div>
+
+<div class="form-item">
+    <button  type="reset">Sıfırla</button>
+    <button type="submit">Gönder</button>
+</div>
+
+</form>
+
+</body>
+</html>
